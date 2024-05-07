@@ -1,28 +1,30 @@
+"use client";
 import { useState } from "react";
-import "./App.css";
+import "@/styles/App.css";
 
-const phrases = ["No", ":(", "Don't Do This", "I Love You Babe"];
+export default function Page() {
+  // List of phrases to display on the no button
+  const phrases = ["No", ":(", "Don't Do This"];
 
-function App() {
   const [noCount, setNoCount] = useState(0);
   const [yesPressed, setYesPressed] = useState(false);
   // Incremental change value for width and height
   const changeValue = 5;
 
   // Initial dimensions for buttons
-  const initialSize = 15; // Initial font size in pixels
-  const initialWidth = 120; // Initial width in pixels
-  const initialHeight = 40; // Initial height in pixels
+  const initialSize = 15;
+  const initialWidth = 120;
+  const initialHeight = 40;
 
   // Calculate sizes based on noCount
-  const yesButtonSize = initialSize + noCount * changeValue; // Increases size
-  const noButtonSize = initialSize - noCount * (changeValue / 2); // Decreases size
+  const yesButtonSize = initialSize + noCount * changeValue;
+  const noButtonSize = initialSize - noCount * (changeValue / 2);
 
-  const yesButtonWidth = initialWidth + noCount * changeValue; // Increases width
-  const noButtonWidth = initialWidth - noCount * changeValue; // Decreases width
+  const yesButtonWidth = initialWidth + noCount * changeValue;
+  const noButtonWidth = initialWidth - noCount * changeValue;
 
-  const yesButtonHeight = initialHeight + noCount * changeValue; // Increases height
-  const noButtonHeight = initialHeight - noCount * changeValue; // Decreases height
+  const yesButtonHeight = initialHeight + noCount * changeValue;
+  const noButtonHeight = initialHeight - noCount * changeValue;
 
   function handleNoClick() {
     setNoCount(noCount + 1);
@@ -78,5 +80,3 @@ function App() {
     </div>
   );
 }
-
-export default App;
