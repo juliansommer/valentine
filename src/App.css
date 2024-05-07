@@ -1,0 +1,53 @@
+.valentine-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+}
+
+.button-container {
+  display: flex;
+  flex-direction: row;
+  gap: 10px; /* This adds space between your buttons */
+  padding-top: 10px;
+}
+
+.yes-button,
+.no-button {
+  transition: all 0.3s; /* Smooth transition for size changes */
+  padding: 10px 20px; /* Adjust padding to ensure buttons have a good size */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Changes the mouse cursor to a pointer */
+}
+
+.yes-button {
+  background-color: green; /* Green background */
+  color: white; /* White text */
+  border: none; /* Removes the border */
+  padding: 10px 20px; /* Padding around the text */
+  border-radius: 5px; /* Rounded corners */
+  cursor: pointer; /* Changes the mouse cursor to a pointer */
+  transition: background-color 0.3s; /* Smooth transition for hover effect */
+}
+
+.yes-button:hover {
+  background-color: darkgreen; /* Darker green when hovered */
+}
+
+.no-button {
+  background-color: red;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.3s; /* Smooth transition for size changes */
+  overflow: hidden; /* Prevents text from overflowing */
+  white-space: nowrap; /* Keeps the text on a single line */
+  text-overflow: ellipsis; /* Adds an ellipsis (...) when text overflows */
+}
+
+.no-button:hover {
+  background-color: darkred; /* Darker red when hovered */
+}
